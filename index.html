@@ -141,7 +141,7 @@ section{padding:7rem 0}
 .reg-title{font-family:'Bebas Neue',cursive;font-size:2.2rem;letter-spacing:.06em;color:var(--white);margin-bottom:.6rem}
 .reg-desc{font-size:1.05rem;color:var(--off);line-height:1.78;margin-bottom:1.8rem;font-weight:300}
 .reg-deadline{font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:.12em;color:var(--dim);margin-bottom:1.4rem;display:flex;align-items:center;gap:.4rem}
-.reg-deadline::before{content:'⏱';font-size:.85rem}
+.reg-deadline::before{content:'';font-size:.85rem}
 
 /* RESOURCES */
 #resources{background:var(--bg2)}
@@ -165,7 +165,7 @@ section{padding:7rem 0}
 .press-info{display:flex;flex-direction:column;gap:1.5rem}
 .press-info p{font-size:1.08rem;color:var(--off);line-height:1.82;font-weight:300}
 .press-perks{display:flex;flex-direction:column;gap:.9rem;margin-top:.5rem}
-.perk{display:flex;align-items:flex-start;gap:.8rem;font-size:1rem;color:var(--off)}
+.perk{display:flex;align-items:flex-start;gap:.4rem;font-size:1rem;color:var(--off)}
 .perk::before{content:'→';color:var(--gold);flex-shrink:0;font-family:'Share Tech Mono',monospace;font-size:.8rem;margin-top:.2rem}
 .press-form-wrap{border:1px solid rgba(201,168,76,.12);border-radius:4px;overflow:hidden}
 .press-form-header{background:rgba(201,168,76,.06);border-bottom:1px solid rgba(201,168,76,.1);padding:1rem 1.4rem;display:flex;align-items:center;gap:.7rem}
@@ -326,7 +326,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
     <a href="#register">Register</a>
     <a href="#resources">Resources</a>
     <a href="#press">Press</a>
-    <a href="#secretaria">Secretaría</a>
+    <a href="#secretaria">Secretariat</a>
     <a href="#gallery">Gallery</a>
   </div>
   <a class="nav-cta" href="#register">APPLY NOW</a>
@@ -341,7 +341,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
   <a href="#register" onclick="toggleMenu()">Register</a>
   <a href="#resources" onclick="toggleMenu()">Resources</a>
   <a href="#press" onclick="toggleMenu()">Press</a>
-  <a href="#secretaria" onclick="toggleMenu()">Secretaría</a>
+  <a href="#secretaria" onclick="toggleMenu()">Secretariat</a>
   <a href="#gallery" onclick="toggleMenu()">Gallery</a>
   <a href="#register" class="btn-primary" onclick="toggleMenu()" style="margin-top:1rem">APPLY NOW</a>
 </div>
@@ -458,20 +458,56 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
     <div class="section-eyebrow reveal">Applications Open</div>
     <h2 class="section-title reveal">TAKE YOUR<br><span>SEAT</span></h2>
     <p class="section-lead reveal">We are currently accepting applications. Spots are limited — apply early to secure your committee placement.</p>
-    <div class="reg-grid reveal">
-      <div class="reg-card">
-        <div class="reg-icon">🌍</div>
-        <div class="reg-title">Delegate Registration</div>
-        <p class="reg-desc">Represent a country in one of three committees. No prior MUN experience required. Submit your preferences and we'll confirm your placement.</p>
-        <div class="reg-deadline">Deadline: June 1, 2026</div>
-        <a class="btn-primary" href="https://forms.gle/c9w5K3WQPQAf2xBc9" target="_blank" rel="noopener">Apply as Delegate →</a>
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;margin-top:3rem">
+
+      <!-- LEFT: Delegates photo + card -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9">
+          <img
+            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=80&fit=crop"
+            alt="Delegates in session"
+            referrerpolicy="no-referrer"
+            style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8)"
+          >
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,5,.75) 0%,transparent 60%)"></div>
+          <div style="position:absolute;bottom:1rem;left:1.2rem">
+            <div style="font-family:'Bebas Neue',cursive;font-size:1.2rem;letter-spacing:.1em;color:#C9A84C">Delegates</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.15em;color:rgba(255,255,255,.55)">3 Committees · 36 Countries</div>
+          </div>
+        </div>
+        <div class="reg-card">
+          <div class="reg-icon" style="font-family:'Bebas Neue',cursive;font-size:1.1rem;letter-spacing:.2em;color:var(--gold)">DELEGATE</div>
+          <div class="reg-title">Delegate Registration</div>
+          <p class="reg-desc">Represent a country in one of three committees. No prior MUN experience required — just curiosity and the will to debate.</p>
+          <div class="reg-deadline">Deadline: June 1, 2026</div>
+          <a class="btn-primary" href="https://forms.gle/c9w5K3WQPQAf2xBc9" target="_blank" rel="noopener" style="text-align:center;display:block;cursor:none">Apply as Delegate →</a>
+        </div>
       </div>
-      <div class="reg-card" style="opacity:.75">
-        <div class="reg-icon">📰</div>
-        <div class="reg-title">Press Delegation</div>
-        <p class="reg-desc">Reserved exclusively for <strong style="color:var(--white)">5th Grade Primary students</strong>. This role is assigned internally — not open to general registration.</p>
-        <div style="font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:.12em;color:var(--gold);padding:.5rem .8rem;border:1px solid rgba(201,168,76,.2);border-radius:2px;display:inline-block">BY INTERNAL ASSIGNMENT ONLY</div>
+
+      <!-- RIGHT: Press card (internal only) -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:16/9">
+          <img
+            src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80&fit=crop"
+            alt="Conference press delegation"
+            referrerpolicy="no-referrer"
+            style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.8)"
+          >
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,5,.75) 0%,transparent 60%)"></div>
+          <div style="position:absolute;bottom:1rem;left:1.2rem">
+            <div style="font-family:'Bebas Neue',cursive;font-size:1.2rem;letter-spacing:.1em;color:#C9A84C">Press</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:.55rem;letter-spacing:.15em;color:rgba(255,255,255,.55)">5th Grade Primary · Internal Only</div>
+          </div>
+        </div>
+        <div class="reg-card" style="opacity:.8">
+          <div class="reg-icon" style="font-family:'Bebas Neue',cursive;font-size:1.1rem;letter-spacing:.2em;color:var(--gold)">PRESS</div>
+          <div class="reg-title">Press Delegation</div>
+          <p class="reg-desc">Reserved exclusively for <strong style="color:var(--white)">5th Grade Primary students</strong>. This role is assigned internally — not open to general registration.</p>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:.66rem;letter-spacing:.12em;color:var(--gold);padding:.5rem .8rem;border:1px solid rgba(201,168,76,.2);border-radius:2px;display:inline-block">BY INTERNAL ASSIGNMENT ONLY</div>
+        </div>
       </div>
+
+    </div>
     </div>
   </div>
 </section>
@@ -491,7 +527,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-tags"><span class="res-tag">BEGINNER</span><span class="res-tag">GUIDE</span></div>
         <div class="res-title">Beginner Delegate Guide</div>
         <p class="res-desc">New to Model UN? This comprehensive guide covers how committees work, what to say, how to vote, and how to write a resolution from scratch.</p>
-        <a class="res-dl" href="docs/NHSMUNBeginnerDelegateGuide.pdf" download>⬇ Download PDF</a>
+        <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/NHSMUNBeginnerDelegateGuide.pdf" download>↓ Download PDF</a>
       </div>
 
       <div class="res-item">
@@ -499,7 +535,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-tags"><span class="res-tag">ADVANCED</span><span class="res-tag">GUIDE</span></div>
         <div class="res-title">Advanced Delegate Guide</div>
         <p class="res-desc">Ready to compete for Best Delegate? Learn advanced lobbying, amendment strategy, and how to control the flow of debate like a seasoned diplomat.</p>
-        <a class="res-dl" href="docs/NHSMUNAdvancedDelegateGuide.pdf" download>⬇ Download PDF</a>
+        <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/NHSMUNAdvancedDelegateGuide.pdf" download>↓ Download PDF</a>
       </div>
 
       <div class="res-item">
@@ -507,7 +543,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-tags"><span class="res-tag">PROCEDURE</span></div>
         <div class="res-title">Rules of Procedure</div>
         <p class="res-desc">Master every motion, point, and parliamentary procedure. Know the rules better than anyone else in the room — it's your biggest competitive advantage.</p>
-        <a class="res-dl" href="docs/NHSMUNRulesofProcedureGuide.pdf" download>⬇ Download PDF</a>
+        <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/NHSMUNRulesofProcedureGuide.pdf" download>↓ Download PDF</a>
       </div>
 
       <div class="res-item">
@@ -515,7 +551,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-tags"><span class="res-tag">REFERENCE</span></div>
         <div class="res-title">Points & Motions</div>
         <p class="res-desc">Quick reference for all parliamentary points and motions. Print it, study it, bring it to committee. Covers every formal action you can take on the floor.</p>
-        <a class="res-dl" href="docs/Points_and_Motions_complete.pdf" download>⬇ Download PDF</a>
+        <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/Points_and_Motions_complete.pdf" download>↓ Download PDF</a>
       </div>
 
       <div class="res-item">
@@ -524,8 +560,8 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-title">MUN Glossary & Vocabulary</div>
         <p class="res-desc">From "Placard" to "Preambulatory Clause" — every term you'll hear in committee, defined clearly. Also includes the complete MUN vocabulary reference.</p>
         <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:auto;padding-top:1.4rem">
-          <a class="res-dl" href="docs/Model_UN_Glossary.pdf" download>⬇ Glossary</a>
-          <a class="res-dl res-dl-sec" href="docs/Model_UN_Vocabulary_complete.pdf" download>⬇ Vocabulary</a>
+          <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/Model_UN_Glossary.pdf" download>↓ Glossary</a>
+          <a class="res-dl res-dl-sec" href="https://ciarmmun.github.io/ciarm-mun/docs/Model_UN_Vocabulary_complete.pdf" download>↓ Vocabulary</a>
         </div>
       </div>
 
@@ -535,8 +571,8 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
         <div class="res-title">Research Guide + Forbidden Words</div>
         <p class="res-desc">How to research your country's position and write a winning position paper. Plus the list of words and phrases to never say in formal UN debate.</p>
         <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:auto;padding-top:1.4rem">
-          <a class="res-dl" href="docs/NHSMUNResearchGuide.pdf" download>⬇ Research Guide</a>
-          <a class="res-dl res-dl-sec" href="docs/Forbidden_words_in_a_UN_debate_docx.pdf" download>⬇ Forbidden Words</a>
+          <a class="res-dl" href="https://ciarmmun.github.io/ciarm-mun/docs/NHSMUNResearchGuide.pdf" download>↓ Research Guide</a>
+          <a class="res-dl res-dl-sec" href="https://ciarmmun.github.io/ciarm-mun/docs/Forbidden_words_in_a_UN_debate_docx.pdf" download>↓ Forbidden Words</a>
         </div>
       </div>
 
@@ -676,12 +712,12 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
           <div class="perk">Official press credential and accreditation</div>
         </div>
         <div style="margin-top:1.2rem;padding:.9rem 1.2rem;border:1px solid rgba(201,168,76,.2);border-radius:3px;background:rgba(201,168,76,.04)">
-          <p style="font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:var(--gold)">⚠ RESERVED ROLE</p>
+          <p style="font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:.12em;color:var(--gold)">! RESERVED ROLE</p>
           <p style="font-size:.98rem;color:var(--off);margin-top:.4rem;line-height:1.7">This delegation is by internal assignment only. 5th grade students will be contacted directly by their teacher.</p>
         </div>
       </div>
       <div class="press-form-wrap reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:320px;padding:3rem 2rem;text-align:center;gap:1.5rem">
-        <div style="font-size:3.5rem">📰</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:1rem;letter-spacing:.25em;color:var(--gold);margin-bottom:.3rem">PRESS</div>
         <div style="font-family:'Bebas Neue',cursive;font-size:2.2rem;letter-spacing:.08em;color:var(--white)">5TH GRADE PRIMARY</div>
         <p style="font-size:1.05rem;color:var(--off);line-height:1.75;max-width:32ch">This role is exclusively for 5th Grade Primary students. Applications are handled internally through your classroom teacher.</p>
         <div style="font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:.18em;color:var(--gold);padding:.6rem 1.2rem;border:1px solid rgba(201,168,76,.25);border-radius:2px">NOT OPEN TO PUBLIC REGISTRATION</div>
@@ -696,25 +732,51 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
 <section id="secretaria">
   <div class="container">
     <div class="sec-hero">
-      <div class="section-eyebrow reveal">Secretaría</div>
+      <div class="section-eyebrow reveal">Secretariat</div>
       <h2 class="section-title reveal">JOIN THE<br><span>TEAM</span></h2>
       <p class="section-lead reveal" style="text-align:center;margin:0 auto">The secretariat is the backbone of CIARM MUN. These are the students who make the conference run. We are currently recruiting for all positions.</p>
     </div>
     <div class="sec-roles reveal">
-      <div class="role-card"><div class="role-icon">⚖️</div><div class="role-title">Committee Chair</div><p class="role-desc">Lead a committee session, maintain order, and guide delegates toward resolution.</p></div>
-      <div class="role-card"><div class="role-icon">📋</div><div class="role-title">Director</div><p class="role-desc">Support the chair, manage the speakers list, and assist with procedural matters.</p></div>
-      <div class="role-card"><div class="role-icon">🎙️</div><div class="role-title">Secretary-General</div><p class="role-desc">Lead the entire secretariat and represent the conference with vision and authority.</p></div>
-      <div class="role-card"><div class="role-icon">📡</div><div class="role-title">Press Officer</div><p class="role-desc">Coordinate the press delegation and manage the gazette and communications.</p></div>
+      <div class="role-card"><div class="role-title">Committee Chair</div><p class="role-desc">Lead a committee session, maintain order, and guide delegates toward resolution.</p></div>
+      <div class="role-card"><div class="role-title">Director</div><p class="role-desc">Support the chair, manage the speakers list, and assist with procedural matters.</p></div>
+      <div class="role-card"><div class="role-title">Secretary-General</div><p class="role-desc">Lead the entire secretariat and represent the conference with vision and authority.</p></div>
+      <div class="role-card"><div class="role-title">Press Officer</div><p class="role-desc">Coordinate the press delegation and manage the gazette and communications.</p></div>
     </div>
-    <div class="sec-join reveal">
-      <div class="sec-join-text">
-        <h3>Applications Open</h3>
-        <p>We are looking for motivated, organized students who want to help shape CIARM MUN's first edition. Apply using the form — tell us your strengths, your experience, and which role excites you most.</p>
-        <br>
-        <a class="btn-primary" href="https://forms.gle/JeUkfQzHPShscbFp8" target="_blank" rel="noopener">Apply to Secretariat →</a>
+    <div class="sec-join reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem">
+      <!-- Left: photo of secretariat/delegates -->
+      <div style="position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/3">
+        <img
+          src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&q=80&fit=crop"
+          alt="Secretariat team"
+          referrerpolicy="no-referrer"
+          style="width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.85)"
+        >
+        <!-- gradient overlay -->
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(6,6,5,.6) 0%,transparent 60%)"></div>
+        <!-- label -->
+        <div style="position:absolute;bottom:1.2rem;left:1.4rem">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.6)">CIARM MUN 2026</div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:1.4rem;letter-spacing:.1em;color:#C9A84C;line-height:1">Secretariat</div>
+        </div>
       </div>
-      <div class="sec-join-form">
-        <iframe src="https://forms.gle/JeUkfQzHPShscbFp8" title="Secretariat Application" loading="lazy"></iframe>
+
+      <!-- Right: text + button -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:.65rem;letter-spacing:.25em;color:var(--gold);margin-bottom:.6rem">Applications Open</div>
+          <h3 style="font-family:'Bebas Neue',cursive;font-size:2.2rem;letter-spacing:.06em;color:var(--white);line-height:1.1">Shape the<br><span style="color:#C9A84C">Conference</span></h3>
+        </div>
+        <p style="font-family:'Crimson Pro',serif;font-size:1.1rem;font-weight:300;color:var(--off);line-height:1.8">
+          The secretariat is the team that brings CIARM MUN to life. We are looking for motivated, organized students who want to help shape our first edition — from chairing committees to leading the whole conference.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:.8rem">
+          <a class="btn-primary" href="https://forms.gle/JeUkfQzHPShscbFp8" target="_blank" rel="noopener" style="text-align:center;cursor:none">
+            Apply to Secretariat →
+          </a>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:.6rem;letter-spacing:.15em;color:var(--dim);text-align:center">
+            Tell us your strengths, experience, and which role excites you most
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -837,7 +899,7 @@ footer{background:#000;border-top:1px solid rgba(201,168,76,.08);padding:4rem 0 
   <div id="introDots" style="position:absolute;top:50%;right:1.5rem;transform:translateY(-50%);z-index:10;display:flex;flex-direction:column;gap:.5rem"></div>
 
   <!-- mute btn -->
-  <button id="introMuteBtn" onclick="toggleIntroMute()" style="position:absolute;bottom:50px;right:1.5rem;z-index:10;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);color:#fff;font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.1em;padding:.4rem .8rem;border-radius:2px;cursor:pointer">🔊 AUDIO</button>
+  <button id="introMuteBtn" onclick="toggleIntroMute()" style="position:absolute;bottom:50px;right:1.5rem;z-index:10;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.2);color:#fff;font-family:'Share Tech Mono',monospace;font-size:.62rem;letter-spacing:.1em;padding:.4rem .8rem;border-radius:2px;cursor:pointer">AUDIO</button>
 
 </div>
 
@@ -1206,7 +1268,7 @@ function startIntroProgress() {
 
 function toggleIntroMute() {
   introMuted = !introMuted;
-  document.getElementById('introMuteBtn').textContent = introMuted ? '🔇 MUTED' : '🔊 AUDIO';
+  document.getElementById('introMuteBtn').textContent = introMuted ? 'MUTED' : 'AUDIO';
   if (introMuted && window.speechSynthesis) window.speechSynthesis.cancel();
 }
 
